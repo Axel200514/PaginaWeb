@@ -65,7 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const fetchRecentVideos = async () => {
         try {
             // Use the Uploads playlist instead of search for reliability and speed (saves 99 quota points)
-            const playlistRes = await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${UPLOADS_PLAYLIST_ID}&maxResults=15&key=${API_KEY}`);
+            // Fetch 50 items to ensure we find at least 3 long videos even if there are many shorts
+            const playlistRes = await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${UPLOADS_PLAYLIST_ID}&maxResults=50&key=${API_KEY}`);
             if (!playlistRes.ok) throw new Error("Recent videos fetch failed");
             const playlistData = await playlistRes.json();
 
