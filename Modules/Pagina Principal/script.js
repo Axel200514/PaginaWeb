@@ -1,6 +1,8 @@
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener('DOMContentLoaded', () => {
     const API_KEY = 'AIzaSyD54A5F4eYIlwzD5iYRP6xav1Isi76iaFw';
     const CHANNEL_ID = 'UCu1i6xLwgFuxKzZYS_GoMBA';
+    // To get the uploads playlist, replace the second character of the Channel ID with 'U'
+    const UPLOADS_PLAYLIST_ID = 'UUu1i6xLwgFuxKzZYS_GoMBA';
     const FIXED_VIDEO_ID = '9vmSMvZtGYY';
     const grid = document.getElementById('videos-grid');
 
@@ -32,7 +34,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         const titleElement = card.querySelector('.video-title');
         titleElement.textContent = title;
         
-
         // Animate entrance
         setTimeout(() => {
             card.classList.add('loaded');
@@ -41,63 +42,100 @@ document.addEventListener('DOMContentLoaded', async () => {
         return card;
     };
 
-    try {
-        
-        const fixedVideoRes = await fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${FIXED_VIDEO_ID}&key=${API_KEY}`);
-        const fixedVideoData = await fixedVideoRes.json();
-        
-        
-        const recentSearchRes = await fetch(`https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=30&type=video`);
-        const recentSearchData = await recentSearchRes.json();
-
-        let displayVideos = [];
-
-        // 1. Add the Fixed Video first, marked as Recommended
-        if (fixedVideoData.items && fixedVideoData.items.length > 0) {
-            const fv = fixedVideoData.items[0];
-            displayVideos.push({
-                title: fv.snippet.title,
-                thumbnail: fv.snippet.thumbnails.medium.url,
-                videoId: fv.id,
-                isRecommended: true
-            });
+    const fetchRecommendedVideo = async () => {
+        try {
+            const res = await fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${FIXED_VIDEO_ID}&key=${API_KEY}`);
+            if (!res.ok) throw new Error("Recommended video fetch failed");
+            const data = await res.json();
+            if (data.items && data.items.length > 0) {
+                const fv = data.items[0];
+                return {
+                    title: fv.snippet.title,
+                    thumbnail: fv.snippet.thumbnails.medium.url,
+                    videoId: fv.id,
+                    isRecommended: true
+                };
+            }
+        } catch (error) {
+            console.error("Error fetching recommended video:", error);
         }
+        return null;
+    };
 
-        
-        if (recentSearchData.items && recentSearchData.items.length > 0) {
-            const videoIds = recentSearchData.items.map(item => item.id.videoId).filter(id => id !== FIXED_VIDEO_ID);
-            
-            if (videoIds.length > 0) {
-                const videoDetailsRes = await fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,liveStreamingDetails&id=${videoIds.join(',')}&key=${API_KEY}`);
-                const videoDetailsData = await videoDetailsRes.json();
+    const fetchRecentVideos = async () => {
+        try {
+            // Use the Uploads playlist instead of search for reliability and speed (saves 99 quota points)
+            const playlistRes = await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${UPLOADS_PLAYLIST_ID}&maxResults=15&key=${API_KEY}`);
+            if (!playlistRes.ok) throw new Error("Recent videos fetch failed");
+            const playlistData = await playlistRes.json();
 
-                if (videoDetailsData.items) {
-                    for (let video of videoDetailsData.items) {
-                        const durationSecs = getDurationSeconds(video.contentDetails.duration);
-                        const isLiveStream = video.hasOwnProperty('liveStreamingDetails');
-                        
-                        
-                        if (durationSecs > 61 && !isLiveStream && displayVideos.length < 4) {
-                            displayVideos.push({
-                                title: video.snippet.title,
-                                thumbnail: video.snippet.thumbnails.medium.url,
-                                videoId: video.id,
-                                isRecommended: false
-                            });
+            if (playlistData.items && playlistData.items.length > 0) {
+                // Keep chronological order from playlist
+                const videoIds = playlistData.items
+                    .map(item => item.snippet.resourceId.videoId)
+                    .filter(id => id !== FIXED_VIDEO_ID);
+                
+                if (videoIds.length > 0) {
+                    const detailsRes = await fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,liveStreamingDetails&id=${videoIds.join(',')}&key=${API_KEY}`);
+                    if (!detailsRes.ok) throw new Error("Recent videos details fetch failed");
+                    const detailsData = await detailsRes.json();
+                    
+                    if (detailsData.items) {
+                        const recentVideos = [];
+                        // Iterate based on the playlist order to preserve chronology
+                        for (let id of videoIds) {
+                            const video = detailsData.items.find(v => v.id === id);
+                            if (!video) continue;
+                            
+                            const durationSecs = getDurationSeconds(video.contentDetails.duration);
+                            const isLiveStream = video.hasOwnProperty('liveStreamingDetails');
+                            
+                            if (durationSecs > 61 && !isLiveStream && recentVideos.length < 3) {
+                                recentVideos.push({
+                                    title: video.snippet.title,
+                                    thumbnail: video.snippet.thumbnails.medium.url,
+                                    videoId: video.id,
+                                    isRecommended: false
+                                });
+                            }
                         }
+                        return recentVideos;
                     }
                 }
             }
+        } catch (error) {
+            console.error("Error fetching recent videos:", error);
+        }
+        return [];
+    };
+
+    const loadVideos = async () => {
+        // Fetch both at the same time, independently
+        const [recommendedVideo, recentVideos] = await Promise.all([
+            fetchRecommendedVideo(),
+            fetchRecentVideos()
+        ]);
+
+        let displayVideos = [];
+        
+        if (recommendedVideo) {
+            displayVideos.push(recommendedVideo);
+        }
+        
+        if (recentVideos && recentVideos.length > 0) {
+            displayVideos = displayVideos.concat(recentVideos);
         }
 
-        
         grid.innerHTML = '';
-        displayVideos.forEach((vid, idx) => {
-            grid.appendChild(createVideoCard(vid.title, vid.thumbnail, vid.videoId, idx, vid.isRecommended));
-        });
+        
+        if (displayVideos.length > 0) {
+            displayVideos.forEach((vid, idx) => {
+                grid.appendChild(createVideoCard(vid.title, vid.thumbnail, vid.videoId, idx, vid.isRecommended));
+            });
+        } else {
+            grid.innerHTML = '<p style="text-align:center; color: var(--text-secondary); width: 100%;">No se pudieron cargar los videos. Verifica la clave de la API o la conexión.</p>';
+        }
+    };
 
-    } catch (error) {
-        console.error("Error fetching YouTube videos:", error);
-        grid.innerHTML = '<p style="text-align:center; color: var(--text-secondary); width: 100%;">No se pudieron cargar los videos. Verifica la clave de la API o la conexión.</p>';
-    }
+    loadVideos();
 });
