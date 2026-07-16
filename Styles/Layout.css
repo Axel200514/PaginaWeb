@@ -48,6 +48,16 @@
     margin-top: 40px;
 }
 
+.site-footer {
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    width: 100%;
+}
+
 /* Responsive Breakpoints */
 @media (max-width: 768px) {
     .hero-title {
