@@ -46,6 +46,7 @@
     justify-content: center;
     gap: 30px;
     margin-top: 40px;
+    min-height: 400px;
 }
 
 .site-footer {
