@@ -110,7 +110,35 @@ document.addEventListener('DOMContentLoaded', () => {
         return [];
     };
 
+    const CACHE_KEY = 'yt_videos_cache';
+    const CACHE_DURATION = 2 * 60 * 60 * 1000; // 2 hours in milliseconds
+
+    const renderVideos = (displayVideos) => {
+        grid.innerHTML = '';
+        if (displayVideos && displayVideos.length > 0) {
+            displayVideos.forEach((vid, idx) => {
+                grid.appendChild(createVideoCard(vid.title, vid.thumbnail, vid.videoId, idx, vid.isRecommended));
+            });
+        } else {
+            grid.innerHTML = '<p style="text-align:center; color: var(--text-secondary); width: 100%;">No se pudieron cargar los videos. Verifica la clave de la API o la conexión.</p>';
+        }
+    };
+
     const loadVideos = async () => {
+        // Try to load from cache first
+        try {
+            const cached = localStorage.getItem(CACHE_KEY);
+            if (cached) {
+                const parsedCache = JSON.parse(cached);
+                if (Date.now() - parsedCache.timestamp < CACHE_DURATION) {
+                    renderVideos(parsedCache.videos);
+                    return; // Stop here, we used the cache
+                }
+            }
+        } catch (e) {
+            console.warn("Cache read failed", e);
+        }
+
         // Fetch both at the same time, independently
         const [recommendedVideo, recentVideos] = await Promise.all([
             fetchRecommendedVideo(),
@@ -126,16 +154,20 @@ document.addEventListener('DOMContentLoaded', () => {
         if (recentVideos && recentVideos.length > 0) {
             displayVideos = displayVideos.concat(recentVideos);
         }
-
-        grid.innerHTML = '';
         
+        // Save to cache
         if (displayVideos.length > 0) {
-            displayVideos.forEach((vid, idx) => {
-                grid.appendChild(createVideoCard(vid.title, vid.thumbnail, vid.videoId, idx, vid.isRecommended));
-            });
-        } else {
-            grid.innerHTML = '<p style="text-align:center; color: var(--text-secondary); width: 100%;">No se pudieron cargar los videos. Verifica la clave de la API o la conexión.</p>';
+            try {
+                localStorage.setItem(CACHE_KEY, JSON.stringify({
+                    timestamp: Date.now(),
+                    videos: displayVideos
+                }));
+            } catch (e) {
+                console.warn("Cache write failed", e);
+            }
         }
+
+        renderVideos(displayVideos);
     };
 
     loadVideos();
