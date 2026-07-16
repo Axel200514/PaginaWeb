@@ -89,9 +89,9 @@ document.addEventListener('DOMContentLoaded', () => {
                             if (!video) continue;
                             
                             const durationSecs = getDurationSeconds(video.contentDetails.duration);
-                            const isLiveStream = video.hasOwnProperty('liveStreamingDetails');
                             
-                            if (durationSecs > 61 && !isLiveStream && recentVideos.length < 3) {
+                            // Include if it's longer than 60s (filters out shorts and upcoming streams which are PT0S)
+                            if (durationSecs > 61 && recentVideos.length < 3) {
                                 recentVideos.push({
                                     title: video.snippet.title,
                                     thumbnail: video.snippet.thumbnails.medium.url,
