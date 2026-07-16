@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+
+:root {
+    /* Colors */
+    --bg-color: #0b0c10;
+    --surface-color: #1f2833;
+    --text-primary: #ffffff;
+    --text-secondary: #c5c6c7;
+    --accent-neon: #66fcf1;
+    --accent-dark: #45a29e;
+    
+    /* Social Brand Colors */
+    --yt-red: #ff0000;
+    --tiktok-cyan: #00f2fe;
+    --tiktok-pink: #fe0979;
+    --ig-gradient: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+
+    /* Fonts */
+    --font-primary: 'Outfit', sans-serif;
+
+    /* Effects */
+    --glass-bg: rgba(31, 40, 51, 0.4);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --neon-glow: 0 0 10px var(--accent-neon), 0 0 20px var(--accent-neon);
+}

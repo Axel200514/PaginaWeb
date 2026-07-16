@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotus_2003 | Creador de Contenido</title>
+    
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="../../Styles/Variables.css">
+    <link rel="stylesheet" href="../../Styles/Reset.css">
+    <link rel="stylesheet" href="../../Styles/Layout.css">
+    <link rel="stylesheet" href="../../Styles/Utilities.css">
+    
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Image -->
+    <div class="bg-image"></div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero-section glass-card">
+            <!-- Circular Logo -->
+            <img src="../../Styles/Images/Logo.webp" alt="Lotus_2003 Logo" class="circular-logo">
+            
+            <h1 class="text-gradient hero-title">Lotus_2003</h1>
+            <p class="hero-subtitle">
+                Join the Community and Enjoy the Best Content.
+            </p>
+
+            <!-- Social Links -->
+            <div class="social-links">
+                <a href="https://www.youtube.com/@Lotus_2003" target="_blank" rel="noopener noreferrer" class="social-btn btn-yt">
+                    <i class="fa-brands fa-youtube" style="margin-right: 8px; font-size: 1.2rem;"></i> YouTube
+                </a>
+                <a href="https://www.tiktok.com/@lotuso.o?_r=1&_t=ZT-985N750lvfK" target="_blank" class="social-btn btn-tiktok">
+                    <i class="fa-brands fa-tiktok" style="margin-right: 8px; font-size: 1.2rem;"></i> TikTok
+                </a>
+                <a href="https://www.instagram.com/lotus.o.o?igsh=MW02ZXBoM3pjb2ttMA==" target="_blank" class="social-btn btn-ig">
+                    <i class="fa-brands fa-instagram" style="margin-right: 8px; font-size: 1.2rem;"></i> Instagram
+                </a>
+            </div>
+        </section>
+
+        <!-- Dynamic Content Section -->
+        <section class="content-section">
+            <h2 class="text-gradient" style="text-align: center; font-size: 2.5rem; margin-bottom: 20px;">Últimos Videos</h2>
+            <div class="grid-layout" id="videos-grid">
+                <!-- Videos will be dynamically injected here by JS -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Templates -->
+    <template id="video-card-template">
+        <a href="" target="_blank" rel="noopener noreferrer" class="glass-card video-card">
+            <div class="recommended-badge">Recomendado</div>
+            <div class="video-thumb-container">
+                <img src="" alt="" class="video-thumb">
+            </div>
+            <h3 class="video-title"></h3>
+            <span class="social-btn btn-yt btn-ver-video">Ver Video</span>
+        </a>
+    </template>
+
+    <!-- Page Specific Script -->
+    <script src="script.js"></script>
+</body>
+</html>
