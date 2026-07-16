@@ -194,8 +194,6 @@
     background-image: url('../Styles/Images/Background.webp');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     filter: brightness(0.3) blur(5px);
-    transform: translateZ(0);
-    will-change: transform, filter;
-    backface-visibility: hidden;
 }
