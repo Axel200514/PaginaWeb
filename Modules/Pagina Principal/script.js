@@ -215,5 +215,8 @@ document.addEventListener('DOMContentLoaded', () => {
         renderVideos(displayVideos);
     };
 
-    loadVideos();
+    // Yield the main thread so the browser can paint the UI immediately
+    setTimeout(() => {
+        loadVideos();
+    }, 0);
 });

@@ -199,12 +199,11 @@
     width: 100%;
     height: 100%;
     z-index: -1;
-    background-image: url('../Styles/Images/Background.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../Styles/Images/Background.webp');
     background-size: cover;
     background-position: center;
     transform: translateZ(0); /* Hardware acceleration */
     will-change: transform;
-    filter: brightness(0.3) blur(5px);
 }
 
 /* --- Mobile / Continuous Animations --- */
