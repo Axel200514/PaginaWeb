@@ -1,5 +1,9 @@
 CHANGELOG
 
+[Security - 2026-07-18]
+- Agregada etiqueta meta `Content-Security-Policy` en `index.html` para mitigar ataques de Cross-Site Scripting (XSS).
+- Añadido el atributo `rel="noopener noreferrer"` a los enlaces externos de TikTok e Instagram para prevenir vulnerabilidades de tabnabbing.
+
 [Released]
 - Added subtle UI click sounds.
 - Replaced hover effects with continuous mobile animations.
