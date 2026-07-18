@@ -1,10 +1,15 @@
 CHANGELOG
 
-[Security - 2026-07-18]
-- Agregada etiqueta meta `Content-Security-Policy` en `index.html` para mitigar ataques de Cross-Site Scripting (XSS).
-- Añadido el atributo `rel="noopener noreferrer"` a los enlaces externos de TikTok e Instagram para prevenir vulnerabilidades de tabnabbing.
+[2026-07-18] Performance & Security
+- Self-hosted Outfit font to eliminate Google Fonts render-blocking.
+- Replaced FontAwesome library with local SVG icons (YT, TT, IG).
+- Applied CSS filters to SVGs to match original solid white aesthetic.
+- Replaced FontAwesome spinner with pure CSS loader.
+- Added Content-Security-Policy meta tag for XSS protection.
+- Added rel="noopener noreferrer" to external links for tabnabbing prevention.
+- Improved Open Graph metadata for rich sharing and WhatsApp compatibility.
 
-[Released]
+[2026-07-18] UI/UX & QoL
 - Added subtle UI click sounds.
 - Replaced hover effects with continuous mobile animations.
 - Slowed animations for visual accessibility.
@@ -14,10 +19,9 @@ CHANGELOG
 - Translated UI text to English.
 - Added Favicon using Logo.webp.
 - Implemented Loading Spinner for video fetching.
-- Added Open Graph metadata for rich social media sharing.
 
-[Previous]
-- Added localStorage caching for YouTube API.
+[2026-07-16] Core Fixes
+- Added localStorage caching for YouTube API responses.
 - Increased maxResults to 50 for video fetching.
 - Fixed skipping of Premieres and VODs.
 - Optimized background image load times.
