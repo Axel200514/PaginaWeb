@@ -16,16 +16,37 @@
     z-index: 1;
 }
 
-.hero-title {
+h1.hero-title {
     font-size: 4rem;
     margin-bottom: 10px;
+    background: linear-gradient(to right, #ffffff, #00f2fe, #ffffff, #fe0979, #ffffff);
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: title-shine 10s linear infinite;
+    filter: drop-shadow(0 0 10px rgba(0, 242, 254, 0.5));
+}
+
+@keyframes title-shine {
+    to { background-position: 300% center; }
 }
 
 .hero-subtitle {
     font-size: 1.2rem;
-    color: var(--text-secondary);
+    color: #e0fbfc; /* Cyan pastel muy suave para mantener sintonía */
     max-width: 600px;
     margin: 0 auto;
+    animation: subtitle-glow 6s infinite alternate ease-in-out;
+}
+
+@keyframes subtitle-glow {
+    0% {
+        text-shadow: 0 0 5px rgba(0, 242, 254, 0.2);
+    }
+    100% {
+        text-shadow: 0 0 15px rgba(254, 9, 121, 0.6), 0 0 25px rgba(0, 242, 254, 0.4);
+    }
 }
 
 .social-links {

@@ -1,4 +1,47 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Subtle UI Click Sound using Web Audio API
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    let audioCtx;
+
+    const playSubtlePop = () => {
+        if (!audioCtx) audioCtx = new AudioContext();
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+        
+        const oscillator = audioCtx.createOscillator();
+        const gainNode = audioCtx.createGain();
+
+        oscillator.connect(gainNode);
+        gainNode.connect(audioCtx.destination);
+
+        oscillator.type = 'sine';
+        oscillator.frequency.setValueAtTime(600, audioCtx.currentTime);
+        oscillator.frequency.exponentialRampToValueAtTime(100, audioCtx.currentTime + 0.05);
+
+        gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
+        gainNode.gain.linearRampToValueAtTime(0.15, audioCtx.currentTime + 0.01); // Volumen super bajo (20%)
+        gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.1);
+
+        oscillator.start(audioCtx.currentTime);
+        oscillator.stop(audioCtx.currentTime + 0.1);
+    };
+
+    // Attach to existing social buttons
+    document.querySelectorAll('.social-btn').forEach(btn => {
+        btn.addEventListener('click', playSubtlePop);
+    });
+
+    const _0x1a2b = document.querySelector(['.ci', 'rcular', '-logo'].join(''));
+    if (_0x1a2b) {
+        let _0x3c4d = 0;
+        _0x1a2b.addEventListener(['cl', 'ick'].join(''), () => {
+            playSubtlePop(); // También suena al tocar el Easter Egg
+            if (++_0x3c4d >= 3) {
+                _0x3c4d = 0;
+                window[String.fromCharCode(111, 112, 101, 110)](atob('aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1kUXc0dzlXZ1hjUQ=='), '_blank');
+            }
+        });
+    }
+
     const API_KEY = 'AIzaSyD54A5F4eYIlwzD5iYRP6xav1Isi76iaFw';
     const CHANNEL_ID = 'UCu1i6xLwgFuxKzZYS_GoMBA';
     // To get the uploads playlist, replace the second character of the Channel ID with 'U'
@@ -33,6 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const titleElement = card.querySelector('.video-title');
         titleElement.textContent = title;
+        
+        card.addEventListener('click', playSubtlePop);
         
         // Animate entrance
         setTimeout(() => {
@@ -120,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 grid.appendChild(createVideoCard(vid.title, vid.thumbnail, vid.videoId, idx, vid.isRecommended));
             });
         } else {
-            grid.innerHTML = '<p style="text-align:center; color: var(--text-secondary); width: 100%;">No se pudieron cargar los videos. Verifica la clave de la API o la conexión.</p>';
+            grid.innerHTML = '<p style="text-align:center; color: var(--text-secondary); width: 100%;">Could not load videos. Please check the API key or connection.</p>';
         }
     };
 

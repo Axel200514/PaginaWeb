@@ -50,6 +50,7 @@
 .video-card.recommended {
     border: 2px solid var(--yt-red);
     box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    animation: recommended-pulse 4s infinite alternate ease-in-out;
 }
 
 .recommended-badge {
@@ -94,12 +95,13 @@
 
 .video-title {
     font-size: 1.1rem;
+    line-height: 1.4;
     margin-bottom: 10px;
-    height: 3.3rem;
+    min-height: 4.62rem; /* Espacio exacto para 3 líneas */
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
 
@@ -117,6 +119,7 @@
     box-shadow: var(--neon-glow);
     margin-bottom: 20px;
     transition: transform 0.3s ease;
+    animation: logo-pulse 6s infinite alternate ease-in-out;
 }
 
 .circular-logo:hover {
@@ -124,10 +127,12 @@
 }
 
 .text-gradient {
-    background: linear-gradient(to right, var(--accent-neon), var(--accent-dark));
+    background: linear-gradient(to right, var(--accent-dark), var(--accent-neon), #ffffff, var(--accent-neon), var(--accent-dark));
+    background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: text-shine 3s infinite alternate ease-in-out;
 }
 
 .social-btn {
@@ -172,16 +177,19 @@
 .btn-yt {
     background-color: var(--yt-red);
     box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+    animation: yt-pulse 4s infinite alternate ease-in-out;
 }
 
 .btn-tiktok {
     background: linear-gradient(45deg, var(--tiktok-cyan), var(--tiktok-pink));
     box-shadow: 0 4px 15px rgba(0, 242, 254, 0.4);
+    animation: tiktok-pulse 4s infinite alternate ease-in-out;
 }
 
 .btn-ig {
     background: var(--ig-gradient);
     box-shadow: 0 4px 15px rgba(220, 39, 67, 0.4);
+    animation: ig-pulse 4s infinite alternate ease-in-out;
 }
 
 .bg-image {
@@ -197,4 +205,64 @@
     transform: translateZ(0); /* Hardware acceleration */
     will-change: transform;
     filter: brightness(0.3) blur(5px);
+}
+
+/* --- Mobile / Continuous Animations --- */
+.video-card.loaded:not(.recommended) {
+    animation: subtle-glow 8s infinite alternate ease-in-out;
+}
+
+@keyframes logo-pulse {
+    0% {
+        box-shadow: 0 0 5px var(--accent-neon), 0 0 10px var(--accent-neon);
+    }
+    100% {
+        box-shadow: 0 0 15px var(--accent-neon), 0 0 30px var(--accent-neon);
+    }
+}
+
+@keyframes yt-pulse {
+    0% { box-shadow: 0 0 5px rgba(255, 0, 0, 0.4); }
+    100% { box-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 0, 0.5); }
+}
+
+@keyframes tiktok-pulse {
+    0% { box-shadow: 0 0 5px rgba(0, 242, 254, 0.4); }
+    100% { box-shadow: 0 0 20px rgba(0, 242, 254, 0.8), 0 0 30px rgba(254, 9, 121, 0.6); }
+}
+
+@keyframes ig-pulse {
+    0% { box-shadow: 0 0 5px rgba(220, 39, 67, 0.4); }
+    100% { box-shadow: 0 0 20px rgba(240, 148, 51, 0.8), 0 0 30px rgba(220, 39, 67, 0.6); }
+}
+
+@keyframes recommended-pulse {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+        border-color: rgba(255, 0, 0, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 25px rgba(255, 0, 0, 1), 0 0 10px rgba(255, 0, 0, 0.8) inset;
+        border-color: rgba(255, 50, 50, 1);
+    }
+}
+
+@keyframes subtle-glow {
+    0% {
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        border-color: var(--glass-border);
+    }
+    100% {
+        box-shadow: 0 8px 32px 0 rgba(102, 252, 241, 0.15), 0 0 15px rgba(102, 252, 241, 0.2);
+        border-color: rgba(102, 252, 241, 0.4);
+    }
+}
+
+@keyframes text-shine {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
+        background-position: 100% center;
+    }
 }

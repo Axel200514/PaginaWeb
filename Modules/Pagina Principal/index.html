@@ -1,9 +1,19 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotus_2003 | Creador de Contenido</title>
+    <title>Lotus O.o | Creador de Contenido</title>
+    <link rel="icon" href="../../Styles/Images/Logo.webp" type="image/webp">
+    <meta name="description" content="Lotus O.o - Creador de contenido, ilustraciones y diseño de personajes estilo anime. Únete a la comunidad.">
+    <meta name="keywords" content="Lotus O.o, Lotus_2003, anime art, digital art, creador de contenido">
+    
+    <!-- Open Graph / Redes Sociales -->
+    <meta property="og:title" content="Lotus O.o | Creador de Contenido">
+    <meta property="og:description" content="Lotus O.o - Creador de contenido, ilustraciones y diseño de personajes estilo anime. Únete a la comunidad.">
+    <meta property="og:image" content="../../Styles/Images/Open%20Graph.webp">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
     <!-- Preloads -->
     <link rel="preload" href="../../Styles/Images/Background.webp" as="image">
     
@@ -30,9 +40,9 @@
         <!-- Hero Section -->
         <section class="hero-section glass-card">
             <!-- Circular Logo -->
-            <img src="../../Styles/Images/Logo.webp" alt="Lotus_2003 Logo" class="circular-logo" width="150" height="150">
+            <img src="../../Styles/Images/Logo.webp" alt="Lotus O.o Logo" class="circular-logo" width="150" height="150">
             
-            <h1 class="text-gradient hero-title">Lotus_2003</h1>
+            <h1 class="text-gradient hero-title">Lotus O.o</h1>
             <p class="hero-subtitle">
                 Join the Community and Enjoy the Best Content.
             </p>
@@ -53,9 +63,13 @@
 
         <!-- Dynamic Content Section -->
         <section class="content-section">
-            <h2 class="text-gradient" style="text-align: center; font-size: 2.5rem; margin-bottom: 20px;">Últimos Videos</h2>
+            <h2 class="text-gradient" style="text-align: center; font-size: 2.5rem; margin-bottom: 20px;">Latest Videos</h2>
             <div class="grid-layout" id="videos-grid">
-               
+               <!-- Loading Spinner -->
+               <div id="loading-spinner" style="width: 100%; text-align: center; color: var(--text-secondary); padding: 40px 0;">
+                   <i class="fa-solid fa-circle-notch fa-spin" style="font-size: 2.5rem; color: var(--accent-neon); margin-bottom: 15px;"></i>
+                   <p style="font-size: 1.1rem; animation: subtitle-glow 2s infinite alternate ease-in-out;">Loading videos...</p>
+               </div>
             </div>
         </section>
     </main>
@@ -67,12 +81,12 @@
     
     <template id="video-card-template">
         <a href="" target="_blank" rel="noopener noreferrer" class="glass-card video-card">
-            <div class="recommended-badge">Recomendado</div>
+            <div class="recommended-badge">Recommended</div>
             <div class="video-thumb-container">
                 <img src="" alt="" class="video-thumb">
             </div>
             <h3 class="video-title"></h3>
-            <span class="social-btn btn-yt btn-ver-video">Ver Video</span>
+            <span class="social-btn btn-yt btn-ver-video">Watch Video</span>
         </a>
     </template>
 
