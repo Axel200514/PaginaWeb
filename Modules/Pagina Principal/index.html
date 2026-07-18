@@ -30,19 +30,11 @@
     <!-- Preloads -->
     <link rel="preload" href="../../Styles/Images/Background.webp" as="image">
     
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
-    
     <!-- CSS Links -->
     <link rel="stylesheet" href="../../Styles/Variables.css">
     <link rel="stylesheet" href="../../Styles/Reset.css">
     <link rel="stylesheet" href="../../Styles/Layout.css">
     <link rel="stylesheet" href="../../Styles/Utilities.css">
-    
-    <!-- Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <!-- Background Image -->
@@ -63,13 +55,13 @@
             <!-- Social Links -->
             <div class="social-links">
                 <a href="https://www.youtube.com/@Lotus_2003" target="_blank" rel="noopener noreferrer" class="social-btn btn-yt">
-                    <i class="fa-brands fa-youtube" style="margin-right: 8px; font-size: 1.2rem;"></i> YouTube
+                    <img src="../../Styles/Images/YT.svg" alt="YouTube" style="width: 20px; height: 20px; margin-right: 8px; filter: invert(1);"> YouTube
                 </a>
                 <a href="https://www.tiktok.com/@lotuso.o?_r=1&_t=ZT-985N750lvfK" target="_blank" rel="noopener noreferrer" class="social-btn btn-tiktok">
-                    <i class="fa-brands fa-tiktok" style="margin-right: 8px; font-size: 1.2rem;"></i> TikTok
+                    <img src="../../Styles/Images/TT.svg" alt="TikTok" style="width: 20px; height: 20px; margin-right: 8px; filter: invert(1);"> TikTok
                 </a>
                 <a href="https://www.instagram.com/lotus.o.o?igsh=MW02ZXBoM3pjb2ttMA==" target="_blank" rel="noopener noreferrer" class="social-btn btn-ig">
-                    <i class="fa-brands fa-instagram" style="margin-right: 8px; font-size: 1.2rem;"></i> Instagram
+                    <img src="../../Styles/Images/INS.svg" alt="Instagram" style="width: 20px; height: 20px; margin-right: 8px; filter: invert(1);"> Instagram
                 </a>
             </div>
         </section>
@@ -79,8 +71,8 @@
             <h2 class="text-gradient" style="text-align: center; font-size: 2.5rem; margin-bottom: 20px;">Latest Videos</h2>
             <div class="grid-layout" id="videos-grid">
                <!-- Loading Spinner -->
-               <div id="loading-spinner" style="width: 100%; text-align: center; color: var(--text-secondary); padding: 40px 0;">
-                   <i class="fa-solid fa-circle-notch fa-spin" style="font-size: 2.5rem; color: var(--accent-neon); margin-bottom: 15px;"></i>
+               <div id="loading-spinner" style="width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--text-secondary); padding: 40px 0;">
+                   <div style="width: 40px; height: 40px; border: 4px solid rgba(102, 252, 241, 0.1); border-top-color: var(--accent-neon); border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 15px;"></div>
                    <p style="font-size: 1.1rem; animation: subtitle-glow 2s infinite alternate ease-in-out;">Loading videos...</p>
                </div>
             </div>
@@ -99,7 +91,7 @@
                 <img src="" alt="" class="video-thumb">
             </div>
             <h3 class="video-title"></h3>
-            <span class="social-btn btn-yt btn-ver-video">Watch Video</span>
+            <span class="social-btn btn-yt btn-ver-video"><img src="../../Styles/Images/YT.svg" alt="YouTube" style="width: 16px; height: 16px; margin-right: 6px; filter: invert(1);"> Watch Video</span>
         </a>
     </template>
 
