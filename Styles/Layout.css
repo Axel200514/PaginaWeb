@@ -34,8 +34,7 @@ h1.hero-title {
 
 .hero-subtitle {
     font-size: 1.2rem;
-    color: #e0fbfc; /* Cyan pastel muy suave para mantener sintonía */
-    max-width: 600px;
+    color: #e0fbfc;    max-width: 600px;
     margin: 0 auto;
     animation: subtitle-glow 6s infinite alternate ease-in-out;
 }
@@ -80,7 +79,6 @@ h1.hero-title {
     width: 100%;
 }
 
-/* Responsive Breakpoints */
 @media (max-width: 768px) {
     .hero-title {
         font-size: 3rem;

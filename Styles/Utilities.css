@@ -97,8 +97,7 @@
     font-size: 1.1rem;
     line-height: 1.4;
     margin-bottom: 10px;
-    min-height: 4.62rem; /* Espacio exacto para 3 líneas */
-    overflow: hidden;
+    min-height: 4.62rem;    overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -202,11 +201,9 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../Styles/Images/Background.webp');
     background-size: cover;
     background-position: center;
-    transform: translateZ(0); /* Hardware acceleration */
-    will-change: transform;
+    transform: translateZ(0);    will-change: transform;
 }
 
-/* --- Mobile / Continuous Animations --- */
 .video-card.loaded:not(.recommended) {
     animation: subtle-glow 8s infinite alternate ease-in-out;
 }

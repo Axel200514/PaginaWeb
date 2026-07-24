@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         oscillator.frequency.exponentialRampToValueAtTime(100, audioCtx.currentTime + 0.05);
 
         gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
-        gainNode.gain.linearRampToValueAtTime(0.15, audioCtx.currentTime + 0.01); // Volumen super bajo (20%)
+        gainNode.gain.linearRampToValueAtTime(0.15, audioCtx.currentTime + 0.01);
         gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.1);
 
         oscillator.start(audioCtx.currentTime);
@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const CACHE_KEY = 'yt_videos_cache';
-    const CACHE_DURATION = 2 * 60 * 60 * 1000; // 2 hours in milliseconds
+    const CACHE_DURATION = 2 * 60 * 60 * 1000;
 
     const renderVideos = (displayVideos) => {
         grid.innerHTML = '';
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const parsedCache = JSON.parse(cached);
                 if (Date.now() - parsedCache.timestamp < CACHE_DURATION) {
                     renderVideos(parsedCache.videos);
-                    return; // Stop here, we used the cache
+                    return;
                 }
             }
         } catch (e) {
