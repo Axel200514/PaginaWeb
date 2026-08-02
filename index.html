@@ -2,9 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=Modules/Pagina Principal/index.html">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https://i.ytimg.com https://axel200514.github.io; connect-src 'self' https://www.googleapis.com;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lotus O.o | Creador de Contenido</title>
     <link rel="icon" href="Styles/Images/Logo.webp" type="image/webp">
+    <link rel="canonical" href="https://axel200514.github.io/PaginaWeb/">
+    <meta name="description" content="Lotus O.o - Creador de contenido, ilustraciones y diseño de personajes estilo anime. Únete a la comunidad.">
+    <meta name="keywords" content="Lotus O.o, Lotus_2003, anime art, digital art, creador de contenido">
     
     <meta property="og:site_name" content="Lotus O.o">
     <meta property="og:title" content="Lotus O.o | Creador de Contenido">
@@ -22,11 +26,65 @@
     <meta name="twitter:title" content="Lotus O.o | Creador de Contenido">
     <meta name="twitter:description" content="Lotus O.o - Creador de contenido, ilustraciones y diseño de personajes estilo anime. Únete a la comunidad.">
     <meta name="twitter:image" content="https://axel200514.github.io/PaginaWeb/Styles/Images/OG_Image.jpg">
-    <script>
-        window.location.replace("Modules/Pagina Principal/index.html");
-    </script>
+    
+
+    <link rel="stylesheet" href="Styles/Variables.css">
+    <link rel="stylesheet" href="Styles/Reset.css">
+    <link rel="stylesheet" href="Styles/Layout.css">
+    <link rel="stylesheet" href="Styles/Utilities.css">
 </head>
 <body>
-    <p>Redirecting to <a href="Modules/Pagina Principal/index.html">Main Page</a>...</p>
+    <div class="bg-image"></div>
+
+    <main class="container">
+        <section class="hero-section glass-card">
+            <img src="Styles/Images/Logo.webp" alt="Lotus O.o Logo" class="circular-logo" width="150" height="150">
+            
+            <h1 class="text-gradient hero-title">Lotus O.o</h1>
+            <p class="hero-subtitle">
+                Join the Community and Enjoy the Best Content.
+            </p>
+
+            <div class="social-links">
+                <a href="https://www.youtube.com/@Lotus_2003" target="_blank" rel="noopener noreferrer" class="social-btn btn-yt">
+                    <img src="Styles/Images/YT.svg" alt="YouTube" style="width: 20px; height: 20px; margin-right: 8px; filter: brightness(0) invert(1);"> YouTube
+                </a>
+                <a href="https://www.tiktok.com/@lotuso.o?_r=1&_t=ZT-985N750lvfK" target="_blank" rel="noopener noreferrer" class="social-btn btn-tiktok">
+                    <img src="Styles/Images/TT.svg" alt="TikTok" style="width: 20px; height: 20px; margin-right: 8px; filter: brightness(0) invert(1);"> TikTok
+                </a>
+                <a href="https://www.instagram.com/lotus.o.o?igsh=MW02ZXBoM3pjb2ttMA==" target="_blank" rel="noopener noreferrer" class="social-btn btn-ig">
+                    <img src="Styles/Images/INS.svg" alt="Instagram" style="width: 20px; height: 20px; margin-right: 8px; filter: brightness(0) invert(1);"> Instagram
+                </a>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="text-gradient" style="text-align: center; font-size: 2.5rem; margin-bottom: 20px;">Latest Videos</h2>
+            <div class="grid-layout" id="videos-grid">
+               <div id="loading-spinner" style="width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--text-secondary); padding: 40px 0;">
+                   <div style="width: 40px; height: 40px; border: 4px solid rgba(102, 252, 241, 0.1); border-top-color: var(--accent-neon); border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 15px;"></div>
+                   <p style="font-size: 1.1rem; animation: subtitle-glow 2s infinite alternate ease-in-out;">Loading videos...</p>
+               </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Lotus O.o. All rights reserved.</p>
+    </footer>
+
+    
+    <template id="video-card-template">
+        <a href="" target="_blank" rel="noopener noreferrer" class="glass-card video-card">
+            <div class="recommended-badge">Recommended</div>
+            <div class="video-thumb-container">
+                <img src="" alt="" class="video-thumb">
+            </div>
+            <h3 class="video-title"></h3>
+            <span class="social-btn btn-yt btn-ver-video"><img src="Styles/Images/YT.svg" alt="YouTube" style="width: 16px; height: 16px; margin-right: 6px; filter: brightness(0) invert(1);"> Watch Video</span>
+        </a>
+    </template>
+
+    <script src="Modules/Pagina Principal/script.js?v=5" defer></script>
 </body>
 </html>

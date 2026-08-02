@@ -1,5 +1,10 @@
 CHANGELOG
 
+[2026-08-02] SEO & Routing Fixes
+- Consolidated main page into root index.html to eliminate Google Search Console "Redirect error" and "Duplicate without user-selected canonical" indexing errors.
+- Removed Modules/Pagina Principal/index.html while keeping Modules/Pagina Principal/script.js.
+- Added explicit <link rel="canonical" href="https://axel200514.github.io/PaginaWeb/" /> tag to index.html.
+
 [2026-07-18] Performance & Security
 - Self-hosted Outfit font to eliminate Google Fonts render-blocking.
 - Replaced FontAwesome library with local SVG icons (YT, TT, IG).
