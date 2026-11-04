@@ -4,6 +4,7 @@ const COLLAB_PROJECTS = [
     { id: 4, title: "Almacen de Tokens Seguro", tag: "Security", author: "Axel & Alex", desc: "Capa de persistencia desacoplada para tokens Bearer en almacenamiento cifrado.", url: "https://github.com/Axel200514" },
     { id: 5, title: "Contenedor GetIt Service Locator", tag: "Architecture", author: "Axel & Alex", desc: "Inyeccion de dependencias centralizada para repositorios y servicios de dominio.", url: "https://github.com/Axel200514" },
     { id: 6, title: "Motor de Validacion de Datos", tag: "Utilities", author: "Axel & Alex", desc: "Modulo de validaciones de negocio con sanitizacion preventiva contra inyecciones.", url: "https://github.com/Axel200514" },
+    { id: 7, title: "Optimizador de Cache LRU", tag: "Performance", author: "Axel & Alex", desc: "Algoritmo de gestion de memoria temporal para aceleracion de consultas frecuentes.", url: "https://github.com/Axel200514" },
 ];
 
 function renderCollaborations() {
@@ -21,6 +22,7 @@ function renderCollaborations() {
     { id: 4, title: "Almacen de Tokens Seguro", tag: "Security", author: "Axel & Alex", desc: "Capa de persistencia desacoplada para tokens Bearer en almacenamiento cifrado.", url: "https://github.com/Axel200514" },
     { id: 5, title: "Contenedor GetIt Service Locator", tag: "Architecture", author: "Axel & Alex", desc: "Inyeccion de dependencias centralizada para repositorios y servicios de dominio.", url: "https://github.com/Axel200514" },
     { id: 6, title: "Motor de Validacion de Datos", tag: "Utilities", author: "Axel & Alex", desc: "Modulo de validaciones de negocio con sanitizacion preventiva contra inyecciones.", url: "https://github.com/Axel200514" },
+    { id: 7, title: "Optimizador de Cache LRU", tag: "Performance", author: "Axel & Alex", desc: "Algoritmo de gestion de memoria temporal para aceleracion de consultas frecuentes.", url: "https://github.com/Axel200514" },
 ];
         const clone = template.content.cloneNode(true);
 
