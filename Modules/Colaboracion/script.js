@@ -11,6 +11,7 @@ const COLLAB_PROJECTS = [
     { id: 19, title: "Interceptores de Red Asincronos", tag: "Networking", author: "Axel & Alex", desc: "Monitoreo y enriquecimiento de encabezados HTTP en tiempo de ejecucion.", url: "https://github.com/Axel200514" },
     { id: 20, title: "Controlador de Formularios Reactivos", tag: "State", author: "Axel & Alex", desc: "Gestion de controladores y liberacion controlada de memoria mediante dispose.", url: "https://github.com/Axel200514" },
     { id: 21, title: "Exportador de Informes Tecnicos", tag: "Reports", author: "Axel & Alex", desc: "Generador de reportes estructurados para auditorias de codigo y calidad.", url: "https://github.com/Axel200514" },
+    { id: 22, title: "Panel de Metricas de Rendimiento", tag: "Monitoring", author: "Axel & Alex", desc: "Visualizador de tiempos de carga, framerate y consumo de recursos DOM.", url: "https://github.com/Axel200514" },
 ];
 
 function renderCollaborations() {
@@ -35,6 +36,7 @@ function renderCollaborations() {
     { id: 19, title: "Interceptores de Red Asincronos", tag: "Networking", author: "Axel & Alex", desc: "Monitoreo y enriquecimiento de encabezados HTTP en tiempo de ejecucion.", url: "https://github.com/Axel200514" },
     { id: 20, title: "Controlador de Formularios Reactivos", tag: "State", author: "Axel & Alex", desc: "Gestion de controladores y liberacion controlada de memoria mediante dispose.", url: "https://github.com/Axel200514" },
     { id: 21, title: "Exportador de Informes Tecnicos", tag: "Reports", author: "Axel & Alex", desc: "Generador de reportes estructurados para auditorias de codigo y calidad.", url: "https://github.com/Axel200514" },
+    { id: 22, title: "Panel de Metricas de Rendimiento", tag: "Monitoring", author: "Axel & Alex", desc: "Visualizador de tiempos de carga, framerate y consumo de recursos DOM.", url: "https://github.com/Axel200514" },
 ];
         const clone = template.content.cloneNode(true);
 
