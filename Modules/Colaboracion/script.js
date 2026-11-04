@@ -46,6 +46,7 @@ const COLLAB_PROJECTS = [
     { id: 54, title: "Servicio de Localizacion GPS", tag: "Geolocation", author: "Axel & Alex", desc: "Consulta reactiva de coordenadas con permisos controlados y fallback seguro.", url: "https://github.com/Axel200514" },
     { id: 55, title: "Gestor de Web Workers", tag: "Concurrency", author: "Axel & Alex", desc: "Procesamiento en segundo plano en hilos dedicados sin bloquear la interfaz.", url: "https://github.com/Axel200514" },
     { id: 56, title: "Parseador Markdown Ultraligero", tag: "Parser", author: "Axel & Alex", desc: "Renderizador seguro de marcado enriquecido con sanitizacion estricta.", url: "https://github.com/Axel200514" },
+    { id: 57, title: "Cliente WebSocket Bidireccional", tag: "Realtime", author: "Axel & Alex", desc: "Canal duplex con reconexion automatica y buffering de paquetes pendientes.", url: "https://github.com/Axel200514" },
 ];
 
 function renderCollaborations() {
@@ -105,6 +106,7 @@ function renderCollaborations() {
     { id: 54, title: "Servicio de Localizacion GPS", tag: "Geolocation", author: "Axel & Alex", desc: "Consulta reactiva de coordenadas con permisos controlados y fallback seguro.", url: "https://github.com/Axel200514" },
     { id: 55, title: "Gestor de Web Workers", tag: "Concurrency", author: "Axel & Alex", desc: "Procesamiento en segundo plano en hilos dedicados sin bloquear la interfaz.", url: "https://github.com/Axel200514" },
     { id: 56, title: "Parseador Markdown Ultraligero", tag: "Parser", author: "Axel & Alex", desc: "Renderizador seguro de marcado enriquecido con sanitizacion estricta.", url: "https://github.com/Axel200514" },
+    { id: 57, title: "Cliente WebSocket Bidireccional", tag: "Realtime", author: "Axel & Alex", desc: "Canal duplex con reconexion automatica y buffering de paquetes pendientes.", url: "https://github.com/Axel200514" },
 ];
         const clone = template.content.cloneNode(true);
 
