@@ -14,6 +14,7 @@ const COLLAB_PROJECTS = [
     { id: 22, title: "Panel de Metricas de Rendimiento", tag: "Monitoring", author: "Axel & Alex", desc: "Visualizador de tiempos de carga, framerate y consumo de recursos DOM.", url: "https://github.com/Axel200514" },
     { id: 23, title: "Sistema de Iconografia Vectorial", tag: "Assets", author: "Axel & Alex", desc: "Libreria de simbolos SVG optimizados para reducir la carga de transferencia.", url: "https://github.com/Axel200514" },
     { id: 24, title: "Filtro de Contenido Dinamico", tag: "Search", author: "Axel & Alex", desc: "Buscador en tiempo real indexado en memoria con coincidencia progresiva.", url: "https://github.com/Axel200514" },
+    { id: 25, title: "Modulo de Notificaciones Toast", tag: "UI Feedback", author: "Axel & Alex", desc: "Mensajes flotantes temporizados con desvanecimiento acelerado por GPU.", url: "https://github.com/Axel200514" },
 ];
 
 function renderCollaborations() {
@@ -41,6 +42,7 @@ function renderCollaborations() {
     { id: 22, title: "Panel de Metricas de Rendimiento", tag: "Monitoring", author: "Axel & Alex", desc: "Visualizador de tiempos de carga, framerate y consumo de recursos DOM.", url: "https://github.com/Axel200514" },
     { id: 23, title: "Sistema de Iconografia Vectorial", tag: "Assets", author: "Axel & Alex", desc: "Libreria de simbolos SVG optimizados para reducir la carga de transferencia.", url: "https://github.com/Axel200514" },
     { id: 24, title: "Filtro de Contenido Dinamico", tag: "Search", author: "Axel & Alex", desc: "Buscador en tiempo real indexado en memoria con coincidencia progresiva.", url: "https://github.com/Axel200514" },
+    { id: 25, title: "Modulo de Notificaciones Toast", tag: "UI Feedback", author: "Axel & Alex", desc: "Mensajes flotantes temporizados con desvanecimiento acelerado por GPU.", url: "https://github.com/Axel200514" },
 ];
         const clone = template.content.cloneNode(true);
 
