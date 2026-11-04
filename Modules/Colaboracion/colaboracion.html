@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colaboraciones | Lotus O.o</title>
+    <link rel="icon" href="../../favicon.ico" sizes="any">
+    <link rel="icon" href="../../favicon.png" type="image/png">
+    <link rel="stylesheet" href="../../Styles/Variables.css">
+    <link rel="stylesheet" href="../../Styles/Reset.css">
+    <link rel="stylesheet" href="../../Styles/Layout.css">
+    <link rel="stylesheet" href="../../Styles/Utilities.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="collab-header">
+        <div class="container">
+            <nav class="nav-bar">
+                <a href="../../index.html" class="nav-back">&larr; Volver al Inicio</a>
+                <h1 class="nav-brand">Lotus O.o</h1>
+            </nav>
+            <div class="hero-section">
+                <h2 class="hero-title">Proyectos & Colaboraciones</h2>
+                <p class="hero-subtitle">Panel de hitos, modulos y desarrollo colaborativo en GitHub</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="collab-wrapper">
+            <div id="collab-grid" class="collab-grid"></div>
+        </section>
+    </main>
+
+    <template id="collab-card-template">
+        <article class="collab-card">
+            <div class="card-header">
+                <span class="card-id"></span>
+                <span class="card-tag"></span>
+            </div>
+            <h3 class="card-title"></h3>
+            <p class="card-desc"></p>
+            <div class="card-footer">
+                <span class="card-author"></span>
+                <a class="card-link" target="_blank" rel="noopener noreferrer">Ver Proyecto</a>
+            </div>
+        </article>
+    </template>
+
+    <script src="./script.js" defer></script>
+</body>
+</html>

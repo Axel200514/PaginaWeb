@@ -1,4 +1,4 @@
-.projects-header {
+.collab-header {
     padding: 20px 0;
     border-bottom: 1px solid var(--glass-border);
     background: var(--glass-bg);
@@ -29,17 +29,17 @@
     font-weight: 800;
 }
 
-.projects-wrapper {
+.collab-wrapper {
     padding: 40px 0 80px;
 }
 
-.projects-grid {
+.collab-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
 }
 
-.project-card {
+.collab-card {
     background: var(--surface-color);
     border: 1px solid var(--glass-border);
     border-radius: 12px;
@@ -51,26 +51,26 @@
     will-change: transform;
 }
 
-.project-card:hover {
+.collab-card:hover {
     transform: translateY(-4px);
     border-color: var(--accent-dark);
 }
 
-.project-header {
+.card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 12px;
 }
 
-.project-id {
+.card-id {
     font-size: 0.8rem;
     font-weight: 800;
     color: var(--accent-neon);
     letter-spacing: 0.05em;
 }
 
-.project-tag {
+.card-tag {
     font-size: 0.75rem;
     background: rgba(102, 252, 241, 0.1);
     color: var(--accent-neon);
@@ -79,14 +79,14 @@
     border: 1px solid rgba(102, 252, 241, 0.3);
 }
 
-.project-title {
-    font-size: 1.25rem;
+.card-title {
+    font-size: 1.2rem;
     color: var(--text-primary);
     margin-bottom: 8px;
     font-weight: 600;
 }
 
-.project-description {
+.card-desc {
     font-size: 0.9rem;
     color: var(--text-secondary);
     line-height: 1.5;
@@ -94,7 +94,7 @@
     flex-grow: 1;
 }
 
-.project-footer {
+.card-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -102,12 +102,12 @@
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.project-role {
+.card-author {
     font-size: 0.8rem;
     color: var(--text-secondary);
 }
 
-.project-link {
+.card-link {
     color: var(--text-primary);
     background: transparent;
     border: 1px solid var(--accent-neon);
@@ -119,13 +119,13 @@
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.project-link:hover {
+.card-link:hover {
     background: var(--accent-neon);
     color: var(--bg-color);
 }
 
 @media (max-width: 768px) {
-    .projects-grid {
+    .collab-grid {
         grid-template-columns: 1fr;
     }
 }
