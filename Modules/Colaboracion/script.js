@@ -17,6 +17,7 @@ const COLLAB_PROJECTS = [
     { id: 25, title: "Modulo de Notificaciones Toast", tag: "UI Feedback", author: "Axel & Alex", desc: "Mensajes flotantes temporizados con desvanecimiento acelerado por GPU.", url: "https://github.com/Axel200514" },
     { id: 26, title: "Paginador Virtual de Listas", tag: "Virtualization", author: "Axel & Alex", desc: "Renderizado exclusivo de elementos visibles en viewport para grandes listas.", url: "https://github.com/Axel200514" },
     { id: 27, title: "Cargador Progresivo de Imagenes", tag: "Assets", author: "Axel & Alex", desc: "Decodificacion asincrona y lazy loading nativo para evitar bloqueos del hilo.", url: "https://github.com/Axel200514" },
+    { id: 28, title: "Manejador de Eventos Delegados", tag: "DOM API", author: "Axel & Alex", desc: "Captura de interacciones en el contenedor principal para ahorrar memoria.", url: "https://github.com/Axel200514" },
 ];
 
 function renderCollaborations() {
@@ -47,6 +48,7 @@ function renderCollaborations() {
     { id: 25, title: "Modulo de Notificaciones Toast", tag: "UI Feedback", author: "Axel & Alex", desc: "Mensajes flotantes temporizados con desvanecimiento acelerado por GPU.", url: "https://github.com/Axel200514" },
     { id: 26, title: "Paginador Virtual de Listas", tag: "Virtualization", author: "Axel & Alex", desc: "Renderizado exclusivo de elementos visibles en viewport para grandes listas.", url: "https://github.com/Axel200514" },
     { id: 27, title: "Cargador Progresivo de Imagenes", tag: "Assets", author: "Axel & Alex", desc: "Decodificacion asincrona y lazy loading nativo para evitar bloqueos del hilo.", url: "https://github.com/Axel200514" },
+    { id: 28, title: "Manejador de Eventos Delegados", tag: "DOM API", author: "Axel & Alex", desc: "Captura de interacciones en el contenedor principal para ahorrar memoria.", url: "https://github.com/Axel200514" },
 ];
         const clone = template.content.cloneNode(true);
 
