@@ -271,12 +271,16 @@
 
 
 .btn-collab {
-    background-color: var(--surface-color);
-    border: 1px solid var(--accent-neon);
-    color: var(--accent-neon);
+    background: linear-gradient(45deg, #7928ca, #2b7fff);
+    box-shadow: 0 4px 15px rgba(121, 40, 202, 0.4);
+    animation: collab-pulse 4s infinite alternate ease-in-out;
 }
 
-.btn-collab:hover {
-    background-color: var(--accent-neon);
-    color: var(--bg-color);
+@keyframes collab-pulse {
+    0% {
+        box-shadow: 0 0 5px rgba(43, 127, 255, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(121, 40, 202, 0.8), 0 0 30px rgba(43, 127, 255, 0.6);
+    }
 }
