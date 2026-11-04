@@ -20,6 +20,7 @@ const COLLAB_PROJECTS = [
     { id: 28, title: "Manejador de Eventos Delegados", tag: "DOM API", author: "Axel & Alex", desc: "Captura de interacciones en el contenedor principal para ahorrar memoria.", url: "https://github.com/Axel200514" },
     { id: 29, title: "Sanitizador de Cadenas UTF-8", tag: "Security", author: "Axel & Alex", desc: "Normalizacion de caracteres especiales y prevencion de desbordamientos.", url: "https://github.com/Axel200514" },
     { id: 30, title: "Adaptador de Almacenamiento Local", tag: "Storage", author: "Axel & Alex", desc: "Wrapper tipado sobre LocalStorage con expiracion automatica de registros.", url: "https://github.com/Axel200514" },
+    { id: 31, title: "Gestor de Historial de Cambios", tag: "Audit", author: "Axel & Alex", desc: "Registro inmutable de versiones para seguimiento continuo de despliegues.", url: "https://github.com/Axel200514" },
 ];
 
 function renderCollaborations() {
@@ -53,6 +54,7 @@ function renderCollaborations() {
     { id: 28, title: "Manejador de Eventos Delegados", tag: "DOM API", author: "Axel & Alex", desc: "Captura de interacciones en el contenedor principal para ahorrar memoria.", url: "https://github.com/Axel200514" },
     { id: 29, title: "Sanitizador de Cadenas UTF-8", tag: "Security", author: "Axel & Alex", desc: "Normalizacion de caracteres especiales y prevencion de desbordamientos.", url: "https://github.com/Axel200514" },
     { id: 30, title: "Adaptador de Almacenamiento Local", tag: "Storage", author: "Axel & Alex", desc: "Wrapper tipado sobre LocalStorage con expiracion automatica de registros.", url: "https://github.com/Axel200514" },
+    { id: 31, title: "Gestor de Historial de Cambios", tag: "Audit", author: "Axel & Alex", desc: "Registro inmutable de versiones para seguimiento continuo de despliegues.", url: "https://github.com/Axel200514" },
 ];
         const clone = template.content.cloneNode(true);
 
