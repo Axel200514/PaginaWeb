@@ -33,6 +33,7 @@ const COLLAB_PROJECTS = [
     { id: 41, title: "Controlador de Gestos Tactiles", tag: "Mobile Web", author: "Axel & Alex", desc: "Deteccion de deslizamientos y toques con eventos pasivos de puntero.", url: "https://github.com/Axel200514" },
     { id: 42, title: "Monitor de Estado de Red Offline", tag: "PWA", author: "Axel & Alex", desc: "Deteccion reactiva de perdida de conectividad y sincronizacion diferida.", url: "https://github.com/Axel200514" },
     { id: 43, title: "Mapeador de Respuestas HTTP REST", tag: "Backend", author: "Axel & Alex", desc: "Transformador agnostico de payloads heterogeneos a modelos de entidad.", url: "https://github.com/Axel200514" },
+    { id: 44, title: "Compresor de Cargas JSON", tag: "Network", author: "Axel & Alex", desc: "Minificacion en memoria para reduccion del ancho de banda transferido.", url: "https://github.com/Axel200514" },
 ];
 
 function renderCollaborations() {
@@ -79,6 +80,7 @@ function renderCollaborations() {
     { id: 41, title: "Controlador de Gestos Tactiles", tag: "Mobile Web", author: "Axel & Alex", desc: "Deteccion de deslizamientos y toques con eventos pasivos de puntero.", url: "https://github.com/Axel200514" },
     { id: 42, title: "Monitor de Estado de Red Offline", tag: "PWA", author: "Axel & Alex", desc: "Deteccion reactiva de perdida de conectividad y sincronizacion diferida.", url: "https://github.com/Axel200514" },
     { id: 43, title: "Mapeador de Respuestas HTTP REST", tag: "Backend", author: "Axel & Alex", desc: "Transformador agnostico de payloads heterogeneos a modelos de entidad.", url: "https://github.com/Axel200514" },
+    { id: 44, title: "Compresor de Cargas JSON", tag: "Network", author: "Axel & Alex", desc: "Minificacion en memoria para reduccion del ancho de banda transferido.", url: "https://github.com/Axel200514" },
 ];
         const clone = template.content.cloneNode(true);
 
