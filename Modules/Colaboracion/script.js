@@ -9,6 +9,7 @@ const COLLAB_PROJECTS = [
     { id: 9, title: "Tarjetas de Renderizado GPU", tag: "Frontend", author: "Axel & Alex", desc: "Componentes modulares acelerados por hardware con cero costo de repintado.", url: "https://github.com/Axel200514" },
     { id: 18, title: "Manejador Global de Excepciones", tag: "Error Handling", author: "Axel & Alex", desc: "Captura centralizada de fallos tipados para respuesta amigable al usuario.", url: "https://github.com/Axel200514" },
     { id: 19, title: "Interceptores de Red Asincronos", tag: "Networking", author: "Axel & Alex", desc: "Monitoreo y enriquecimiento de encabezados HTTP en tiempo de ejecucion.", url: "https://github.com/Axel200514" },
+    { id: 20, title: "Controlador de Formularios Reactivos", tag: "State", author: "Axel & Alex", desc: "Gestion de controladores y liberacion controlada de memoria mediante dispose.", url: "https://github.com/Axel200514" },
 ];
 
 function renderCollaborations() {
@@ -31,6 +32,7 @@ function renderCollaborations() {
     { id: 9, title: "Tarjetas de Renderizado GPU", tag: "Frontend", author: "Axel & Alex", desc: "Componentes modulares acelerados por hardware con cero costo de repintado.", url: "https://github.com/Axel200514" },
     { id: 18, title: "Manejador Global de Excepciones", tag: "Error Handling", author: "Axel & Alex", desc: "Captura centralizada de fallos tipados para respuesta amigable al usuario.", url: "https://github.com/Axel200514" },
     { id: 19, title: "Interceptores de Red Asincronos", tag: "Networking", author: "Axel & Alex", desc: "Monitoreo y enriquecimiento de encabezados HTTP en tiempo de ejecucion.", url: "https://github.com/Axel200514" },
+    { id: 20, title: "Controlador de Formularios Reactivos", tag: "State", author: "Axel & Alex", desc: "Gestion de controladores y liberacion controlada de memoria mediante dispose.", url: "https://github.com/Axel200514" },
 ];
         const clone = template.content.cloneNode(true);
 
