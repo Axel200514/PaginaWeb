@@ -6,6 +6,7 @@ const COLLAB_PROJECTS = [
     { id: 6, title: "Motor de Validacion de Datos", tag: "Utilities", author: "Axel & Alex", desc: "Modulo de validaciones de negocio con sanitizacion preventiva contra inyecciones.", url: "https://github.com/Axel200514" },
     { id: 7, title: "Optimizador de Cache LRU", tag: "Performance", author: "Axel & Alex", desc: "Algoritmo de gestion de memoria temporal para aceleracion de consultas frecuentes.", url: "https://github.com/Axel200514" },
     { id: 8, title: "Sistema de Temas Dinamicos", tag: "UI/UX", author: "Axel & Alex", desc: "Arquitectura de diseno visual con variables CSS y soporte para modo oscuro.", url: "https://github.com/Axel200514" },
+    { id: 9, title: "Tarjetas de Renderizado GPU", tag: "Frontend", author: "Axel & Alex", desc: "Componentes modulares acelerados por hardware con cero costo de repintado.", url: "https://github.com/Axel200514" },
 ];
 
 function renderCollaborations() {
@@ -25,6 +26,7 @@ function renderCollaborations() {
     { id: 6, title: "Motor de Validacion de Datos", tag: "Utilities", author: "Axel & Alex", desc: "Modulo de validaciones de negocio con sanitizacion preventiva contra inyecciones.", url: "https://github.com/Axel200514" },
     { id: 7, title: "Optimizador de Cache LRU", tag: "Performance", author: "Axel & Alex", desc: "Algoritmo de gestion de memoria temporal para aceleracion de consultas frecuentes.", url: "https://github.com/Axel200514" },
     { id: 8, title: "Sistema de Temas Dinamicos", tag: "UI/UX", author: "Axel & Alex", desc: "Arquitectura de diseno visual con variables CSS y soporte para modo oscuro.", url: "https://github.com/Axel200514" },
+    { id: 9, title: "Tarjetas de Renderizado GPU", tag: "Frontend", author: "Axel & Alex", desc: "Componentes modulares acelerados por hardware con cero costo de repintado.", url: "https://github.com/Axel200514" },
 ];
         const clone = template.content.cloneNode(true);
 
