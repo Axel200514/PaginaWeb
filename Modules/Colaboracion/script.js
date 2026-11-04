@@ -22,6 +22,7 @@ const COLLAB_PROJECTS = [
     { id: 30, title: "Adaptador de Almacenamiento Local", tag: "Storage", author: "Axel & Alex", desc: "Wrapper tipado sobre LocalStorage con expiracion automatica de registros.", url: "https://github.com/Axel200514" },
     { id: 31, title: "Gestor de Historial de Cambios", tag: "Audit", author: "Axel & Alex", desc: "Registro inmutable de versiones para seguimiento continuo de despliegues.", url: "https://github.com/Axel200514" },
     { id: 32, title: "Controlador de Modales Accesibles", tag: "A11y", author: "Axel & Alex", desc: "Dialogos modales con bloqueo de foco y cierre accesible por teclado.", url: "https://github.com/Axel200514" },
+    { id: 33, title: "Analizador de Dependencias Ciclicas", tag: "Tooling", author: "Axel & Alex", desc: "Script de verificacion para asegurar una arquitectura en capas limpia.", url: "https://github.com/Axel200514" },
 ];
 
 function renderCollaborations() {
@@ -57,6 +58,7 @@ function renderCollaborations() {
     { id: 30, title: "Adaptador de Almacenamiento Local", tag: "Storage", author: "Axel & Alex", desc: "Wrapper tipado sobre LocalStorage con expiracion automatica de registros.", url: "https://github.com/Axel200514" },
     { id: 31, title: "Gestor de Historial de Cambios", tag: "Audit", author: "Axel & Alex", desc: "Registro inmutable de versiones para seguimiento continuo de despliegues.", url: "https://github.com/Axel200514" },
     { id: 32, title: "Controlador de Modales Accesibles", tag: "A11y", author: "Axel & Alex", desc: "Dialogos modales con bloqueo de foco y cierre accesible por teclado.", url: "https://github.com/Axel200514" },
+    { id: 33, title: "Analizador de Dependencias Ciclicas", tag: "Tooling", author: "Axel & Alex", desc: "Script de verificacion para asegurar una arquitectura en capas limpia.", url: "https://github.com/Axel200514" },
 ];
         const clone = template.content.cloneNode(true);
 
