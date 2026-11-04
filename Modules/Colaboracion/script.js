@@ -30,6 +30,7 @@ const COLLAB_PROJECTS = [
     { id: 38, title: "Sincronizador Multi-Pestana", tag: "Broadcast", author: "Axel & Alex", desc: "Canal de comunicacion entre ventanas abiertas mediante BroadcastChannel.", url: "https://github.com/Axel200514" },
     { id: 39, title: "Validador de Esquemas de Datos", tag: "Data", author: "Axel & Alex", desc: "Comprobacion en runtime de tipos primitivos y estructuras compuestas.", url: "https://github.com/Axel200514" },
     { id: 40, title: "Optimizador de Tipografias Web", tag: "Performance", author: "Axel & Alex", desc: "Estrategia font-display swap para erradicar el parpadeo de texto invisible.", url: "https://github.com/Axel200514" },
+    { id: 41, title: "Controlador de Gestos Tactiles", tag: "Mobile Web", author: "Axel & Alex", desc: "Deteccion de deslizamientos y toques con eventos pasivos de puntero.", url: "https://github.com/Axel200514" },
 ];
 
 function renderCollaborations() {
@@ -73,6 +74,7 @@ function renderCollaborations() {
     { id: 38, title: "Sincronizador Multi-Pestana", tag: "Broadcast", author: "Axel & Alex", desc: "Canal de comunicacion entre ventanas abiertas mediante BroadcastChannel.", url: "https://github.com/Axel200514" },
     { id: 39, title: "Validador de Esquemas de Datos", tag: "Data", author: "Axel & Alex", desc: "Comprobacion en runtime de tipos primitivos y estructuras compuestas.", url: "https://github.com/Axel200514" },
     { id: 40, title: "Optimizador de Tipografias Web", tag: "Performance", author: "Axel & Alex", desc: "Estrategia font-display swap para erradicar el parpadeo de texto invisible.", url: "https://github.com/Axel200514" },
+    { id: 41, title: "Controlador de Gestos Tactiles", tag: "Mobile Web", author: "Axel & Alex", desc: "Deteccion de deslizamientos y toques con eventos pasivos de puntero.", url: "https://github.com/Axel200514" },
 ];
         const clone = template.content.cloneNode(true);
 
