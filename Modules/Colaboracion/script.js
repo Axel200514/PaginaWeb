@@ -2,6 +2,7 @@ const COLLAB_PROJECTS = [
     { id: 1, title: "Modulo de Colaboracion", tag: "Frontend", author: "Axel & Alex", desc: "Arquitectura modular para gestion y despliegue de colaboraciones de software.", url: "https://github.com/Axel200514/PaginaWeb" }
     { id: 3, title: "Cliente API Reutilizable", tag: "Networking", author: "Axel & Alex", desc: "Cliente HTTP tipado con interceptores de autenticacion y serializacion JSON.", url: "https://github.com/Axel200514" },
     { id: 4, title: "Almacen de Tokens Seguro", tag: "Security", author: "Axel & Alex", desc: "Capa de persistencia desacoplada para tokens Bearer en almacenamiento cifrado.", url: "https://github.com/Axel200514" },
+    { id: 5, title: "Contenedor GetIt Service Locator", tag: "Architecture", author: "Axel & Alex", desc: "Inyeccion de dependencias centralizada para repositorios y servicios de dominio.", url: "https://github.com/Axel200514" },
 ];
 
 function renderCollaborations() {
@@ -17,6 +18,7 @@ function renderCollaborations() {
     for (let i = 0; i < COLLAB_PROJECTS.length; i++) {
         const item = COLLAB_PROJECTS[i    { id: 3, title: "Cliente API Reutilizable", tag: "Networking", author: "Axel & Alex", desc: "Cliente HTTP tipado con interceptores de autenticacion y serializacion JSON.", url: "https://github.com/Axel200514" },
     { id: 4, title: "Almacen de Tokens Seguro", tag: "Security", author: "Axel & Alex", desc: "Capa de persistencia desacoplada para tokens Bearer en almacenamiento cifrado.", url: "https://github.com/Axel200514" },
+    { id: 5, title: "Contenedor GetIt Service Locator", tag: "Architecture", author: "Axel & Alex", desc: "Inyeccion de dependencias centralizada para repositorios y servicios de dominio.", url: "https://github.com/Axel200514" },
 ];
         const clone = template.content.cloneNode(true);
 
