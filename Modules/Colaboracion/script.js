@@ -35,6 +35,7 @@ const COLLAB_PROJECTS = [
     { id: 43, title: "Mapeador de Respuestas HTTP REST", tag: "Backend", author: "Axel & Alex", desc: "Transformador agnostico de payloads heterogeneos a modelos de entidad.", url: "https://github.com/Axel200514" },
     { id: 44, title: "Compresor de Cargas JSON", tag: "Network", author: "Axel & Alex", desc: "Minificacion en memoria para reduccion del ancho de banda transferido.", url: "https://github.com/Axel200514" },
     { id: 45, title: "Sistema de Badges de Estado", tag: "UI Components", author: "Axel & Alex", desc: "Etiquetas visuales de clasificacion con variantes semanticas.", url: "https://github.com/Axel200514" },
+    { id: 46, title: "Generador de Resumenes de Auditoria", tag: "Analytics", author: "Axel & Alex", desc: "Consolidador de metricas de calidad y cobertura de codigo.", url: "https://github.com/Axel200514" },
 ];
 
 function renderCollaborations() {
@@ -83,6 +84,7 @@ function renderCollaborations() {
     { id: 43, title: "Mapeador de Respuestas HTTP REST", tag: "Backend", author: "Axel & Alex", desc: "Transformador agnostico de payloads heterogeneos a modelos de entidad.", url: "https://github.com/Axel200514" },
     { id: 44, title: "Compresor de Cargas JSON", tag: "Network", author: "Axel & Alex", desc: "Minificacion en memoria para reduccion del ancho de banda transferido.", url: "https://github.com/Axel200514" },
     { id: 45, title: "Sistema de Badges de Estado", tag: "UI Components", author: "Axel & Alex", desc: "Etiquetas visuales de clasificacion con variantes semanticas.", url: "https://github.com/Axel200514" },
+    { id: 46, title: "Generador de Resumenes de Auditoria", tag: "Analytics", author: "Axel & Alex", desc: "Consolidador de metricas de calidad y cobertura de codigo.", url: "https://github.com/Axel200514" },
 ];
         const clone = template.content.cloneNode(true);
 
