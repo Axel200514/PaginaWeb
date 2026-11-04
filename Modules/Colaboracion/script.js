@@ -42,6 +42,7 @@ const COLLAB_PROJECTS = [
     { id: 50, title: "Suite de Integracion de Modulos", tag: "Ecosystem", author: "Axel & Alex", desc: "Enlace final de todos los componentes colaborativos en la plataforma Lotus.", url: "https://github.com/Axel200514" },
     { id: 51, title: "Optimizador de Imagenes WebP", tag: "Performance", author: "Axel & Alex", desc: "Conversion y compresion dinamica en cliente para reduccion de transferencia.", url: "https://github.com/Axel200514" },
     { id: 52, title: "Modulo de Cifrado AES", tag: "Security", author: "Axel & Alex", desc: "Cifrado simetrico de payloads en memoria antes de persistir en almacenamiento.", url: "https://github.com/Axel200514" },
+    { id: 53, title: "Controlador de Audio Web", tag: "Multimedia", author: "Axel & Alex", desc: "Reproductor desacoplado de efectos de sonido interactivos con Web Audio API.", url: "https://github.com/Axel200514" },
 ];
 
 function renderCollaborations() {
@@ -97,6 +98,7 @@ function renderCollaborations() {
     { id: 50, title: "Suite de Integracion de Modulos", tag: "Ecosystem", author: "Axel & Alex", desc: "Enlace final de todos los componentes colaborativos en la plataforma Lotus.", url: "https://github.com/Axel200514" },
     { id: 51, title: "Optimizador de Imagenes WebP", tag: "Performance", author: "Axel & Alex", desc: "Conversion y compresion dinamica en cliente para reduccion de transferencia.", url: "https://github.com/Axel200514" },
     { id: 52, title: "Modulo de Cifrado AES", tag: "Security", author: "Axel & Alex", desc: "Cifrado simetrico de payloads en memoria antes de persistir en almacenamiento.", url: "https://github.com/Axel200514" },
+    { id: 53, title: "Controlador de Audio Web", tag: "Multimedia", author: "Axel & Alex", desc: "Reproductor desacoplado de efectos de sonido interactivos con Web Audio API.", url: "https://github.com/Axel200514" },
 ];
         const clone = template.content.cloneNode(true);
 
