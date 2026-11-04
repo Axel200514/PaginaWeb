@@ -26,6 +26,7 @@ const COLLAB_PROJECTS = [
     { id: 34, title: "Pipeline de Compilacion Rapida", tag: "DevOps", author: "Axel & Alex", desc: "Automatizacion de empaquetado y verificacion estatica de sintaxis.", url: "https://github.com/Axel200514" },
     { id: 35, title: "Generador de Breadcrumbs Semanticos", tag: "SEO", author: "Axel & Alex", desc: "Rutas de navegacion estructuradas para indexadores y navegadores.", url: "https://github.com/Axel200514" },
     { id: 36, title: "Temporizador de Tareas en Background", tag: "Async", author: "Axel & Alex", desc: "Planificador de ejecuciones diferidas mediante requestIdleCallback.", url: "https://github.com/Axel200514" },
+    { id: 37, title: "Inspector de Accesibilidad Web", tag: "Quality", author: "Axel & Alex", desc: "Herramienta de medicion de contrastes cromaticos segun WCAG AAA.", url: "https://github.com/Axel200514" },
 ];
 
 function renderCollaborations() {
@@ -65,6 +66,7 @@ function renderCollaborations() {
     { id: 34, title: "Pipeline de Compilacion Rapida", tag: "DevOps", author: "Axel & Alex", desc: "Automatizacion de empaquetado y verificacion estatica de sintaxis.", url: "https://github.com/Axel200514" },
     { id: 35, title: "Generador de Breadcrumbs Semanticos", tag: "SEO", author: "Axel & Alex", desc: "Rutas de navegacion estructuradas para indexadores y navegadores.", url: "https://github.com/Axel200514" },
     { id: 36, title: "Temporizador de Tareas en Background", tag: "Async", author: "Axel & Alex", desc: "Planificador de ejecuciones diferidas mediante requestIdleCallback.", url: "https://github.com/Axel200514" },
+    { id: 37, title: "Inspector de Accesibilidad Web", tag: "Quality", author: "Axel & Alex", desc: "Herramienta de medicion de contrastes cromaticos segun WCAG AAA.", url: "https://github.com/Axel200514" },
 ];
         const clone = template.content.cloneNode(true);
 
