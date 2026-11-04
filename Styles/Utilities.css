@@ -276,6 +276,13 @@
     animation: collab-pulse 4s infinite alternate ease-in-out;
 }
 
+.btn-collab:hover,
+.btn-collab:active,
+.btn-collab:focus {
+    color: white;
+}
+
+
 @keyframes collab-pulse {
     0% {
         box-shadow: 0 0 5px rgba(43, 127, 255, 0.4);
