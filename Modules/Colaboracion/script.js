@@ -37,6 +37,7 @@ const COLLAB_PROJECTS = [
     { id: 45, title: "Sistema de Badges de Estado", tag: "UI Components", author: "Axel & Alex", desc: "Etiquetas visuales de clasificacion con variantes semanticas.", url: "https://github.com/Axel200514" },
     { id: 46, title: "Generador de Resumenes de Auditoria", tag: "Analytics", author: "Axel & Alex", desc: "Consolidador de metricas de calidad y cobertura de codigo.", url: "https://github.com/Axel200514" },
     { id: 47, title: "Modulo de Logging Estructurado", tag: "Diagnostics", author: "Axel & Alex", desc: "Emisor de trazas de ejecucion con niveles de severidad y marcas de tiempo.", url: "https://github.com/Axel200514" },
+    { id: 48, title: "Contenedor de Layout Flexible", tag: "CSS Flexbox", author: "Axel & Alex", desc: "Estructura auto-ajustable con aislamiento de contexto de apilamiento.", url: "https://github.com/Axel200514" },
 ];
 
 function renderCollaborations() {
@@ -87,6 +88,7 @@ function renderCollaborations() {
     { id: 45, title: "Sistema de Badges de Estado", tag: "UI Components", author: "Axel & Alex", desc: "Etiquetas visuales de clasificacion con variantes semanticas.", url: "https://github.com/Axel200514" },
     { id: 46, title: "Generador de Resumenes de Auditoria", tag: "Analytics", author: "Axel & Alex", desc: "Consolidador de metricas de calidad y cobertura de codigo.", url: "https://github.com/Axel200514" },
     { id: 47, title: "Modulo de Logging Estructurado", tag: "Diagnostics", author: "Axel & Alex", desc: "Emisor de trazas de ejecucion con niveles de severidad y marcas de tiempo.", url: "https://github.com/Axel200514" },
+    { id: 48, title: "Contenedor de Layout Flexible", tag: "CSS Flexbox", author: "Axel & Alex", desc: "Estructura auto-ajustable con aislamiento de contexto de apilamiento.", url: "https://github.com/Axel200514" },
 ];
         const clone = template.content.cloneNode(true);
 
